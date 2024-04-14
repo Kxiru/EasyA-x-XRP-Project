@@ -1,10 +1,11 @@
 import { useNavigate } from "react-router-dom";
 
-export default function Login() {
+export default function Login(props) {
   const navigate = useNavigate();
 
   const goToNewPage = () => {
     navigate("/Dashboard");
+    props.setLoggedIn(true);
   };
 
   return (
@@ -19,8 +20,8 @@ export default function Login() {
         </div>
 
         <form>
-          <input></input>
-          <input></input>
+          <input placeholder="Username" type="text"></input>
+          <input placeholder="Password" type="password"></input>
           <p style={{ color: "#89F1F3", textAlign: "right" }}>
             Forgot password?
           </p>

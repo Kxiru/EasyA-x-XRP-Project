@@ -1,11 +1,14 @@
 .App {
-  /* text-align: center; */
   background-color: #181818;
   font-family: "Manrope", sans-serif;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
 
 .App-header {
-  min-height: 100vh;
+  height: 100vh;
+  min-width: 90vw;
   display: flex;
   flex-direction: column;
   font-size: calc(10px + 2vmin);
@@ -17,33 +20,25 @@
 }
 
 .navbar {
-  padding: 10px;
-  background-color: #89f1f3;
+  background-color: #121212;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  align-content: center;
+  max-width: 5vw;
+  min-width: 4vw;
 }
 
-.navbar-right {
-  margin-left: auto;
-}
-
-.navbar-button {
-  background-color: #181818;
-  color: #fff;
-  font-family: "Manrope";
-  padding: 8px 10px;
-  border-radius: 10px;
-}
-
-.logo {
-  width: 50px;
+.nav-icon {
+  width: 30px;
   border-radius: 50px;
+  padding: 10px;
+  color: #89f1f3;
 }
 
-.text-logo {
-  font-size: 24px;
-  margin: 0 10px;
+.nav-icon :hover {
+  color: #89f1f3;
 }
 
 .footer {
@@ -52,6 +47,7 @@
   border-top-style: solid;
   color: #fff;
   text-align: center;
+  width: 100%;
 
   p {
     padding: 5px;
@@ -61,28 +57,16 @@
 
 /* Landing page --------------------------------------------------------------- */
 
-.section1 {
+.section {
   display: flex;
   flex-direction: row;
-  margin: 15px 5px;
-  align-items: center;
-  /* position: relative; */
 }
 
-.section-images {
+/* .section-images {
   width: 100%;
   object-fit: contain;
   border-radius: 15px;
-}
-
-.section1-1 {
-  width: 50%;
-}
-
-.section1-2 {
-  width: 50%;
-  text-align: center;
-}
+} */
 
 /* Signin / Login page -------------------------------------------------------------- */
 
@@ -96,7 +80,6 @@
   display: flex;
   flex-direction: column;
   padding: 30px 20px;
-  /* align-items: center; */
   justify-content: center;
 
   p {
@@ -119,12 +102,27 @@ input {
   display: block;
   padding: 15px;
   border-radius: 20px;
-  background-color: #121212;
+  background-color: #181818;
   border-color: #89f1f3;
   margin: 10px auto;
   width: 80%;
+  color: #fff;
 }
 
-form {
-  width: 100%;
+input[type="text"] {
+  background-image: url("./Images/usernameicon.png");
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
 }
+
+input[type="password"] {
+  background-image: url("./Images/pwordlock.png");
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+}
+
+/* form {
+  width: 100%;
+} */

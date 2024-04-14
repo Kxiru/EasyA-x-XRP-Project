@@ -7,19 +7,26 @@ import Login from "./Pages/Login";
 import Dashboard from "./Pages/Dashboard";
 import LandingPage from "./Pages/LandingPage";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { useState } from "react";
 
 function App() {
+  const [loggedin, setLoggedIn] = useState(false);
+
   return (
     <div className="App">
       <Router>
-        <Navbar />
-
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/getstarted" element={<Login />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-        </Routes>
-        <Footer />
+        <Navbar loggedin={loggedin} />
+        <div style={{ display: "flex", flexDirection: "column" }}>
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route
+              path="/getstarted"
+              element={<Login setLoggedIn={setLoggedIn} />}
+            />
+            <Route path="/dashboard" element={<Dashboard />} />
+          </Routes>
+          <Footer />
+        </div>
       </Router>
     </div>
   );

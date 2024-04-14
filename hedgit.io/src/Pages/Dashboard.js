@@ -1,7 +1,9 @@
 export default function Dashboard() {
   return (
     <div className="App-header">
-      <p>Test</p>
+      <div className="section">
+        <div></div>
+      </div>
     </div>
   );
 }
