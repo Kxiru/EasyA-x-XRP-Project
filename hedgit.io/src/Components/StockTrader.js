@@ -43,57 +43,67 @@ const StockTrader = () => {
   }, [stocks]);
 
   return (
-    <div>
-      <h2>Stock Trader</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Company</th>
-            <th>Symbol</th>
-            <th>Price</th>
-            <th>Shares</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {stocks.map((stock) => (
-            <tr key={stock.symbol}>
-              <td>{stock.name}</td>
-              <td>{stock.symbol}</td>
-              <td>${stock.price.toFixed(2)}</td>
-              <td>{stock.shares}</td>
-              <td>
-                <button onClick={() => buyStock(stock.symbol, 1)}>Buy</button>
-                <button onClick={() => sellStock(stock.symbol, 1)}>Sell</button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-
-      <h2>Portfolio</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Company</th>
-            <th>Symbol</th>
-            <th>Shares</th>
-            <th>Value</th>
-          </tr>
-        </thead>
-        <tbody>
-          {stocks
-            .filter((stock) => stock.shares > 0)
-            .map((stock) => (
-              <tr key={stock.symbol}>
-                <td>{stock.name}</td>
-                <td>{stock.symbol}</td>
-                <td>{stock.shares}</td>
-                <td>${(stock.shares * stock.price).toFixed(2)}</td>
+    <div className="App-header">
+      <div className="dashboard">
+        <h3>Stock Trader</h3>
+        <div className="section">
+          <table>
+            <thead>
+              <tr>
+                <th>Company</th>
+                <th>Symbol</th>
+                <th>Price</th>
+                <th>Shares</th>
+                <th>Actions</th>
               </tr>
-            ))}
-        </tbody>
-      </table>
+            </thead>
+            <tbody>
+              {stocks.map((stock) => (
+                <tr key={stock.symbol}>
+                  <td>{stock.name}</td>
+                  <td>{stock.symbol}</td>
+                  <td>${stock.price.toFixed(2)}</td>
+                  <td>{stock.shares}</td>
+                  <td>
+                    <button onClick={() => buyStock(stock.symbol, 1)}>
+                      Buy
+                    </button>
+                    <button onClick={() => sellStock(stock.symbol, 1)}>
+                      Sell
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Portfolio</h3>
+        <div className="section">
+          <table>
+            <thead>
+              <tr>
+                <th>Company</th>
+                <th>Symbol</th>
+                <th>Shares</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              {stocks
+                .filter((stock) => stock.shares > 0)
+                .map((stock) => (
+                  <tr key={stock.symbol}>
+                    <td>{stock.name}</td>
+                    <td>{stock.symbol}</td>
+                    <td>{stock.shares}</td>
+                    <td>${(stock.shares * stock.price).toFixed(2)}</td>
+                  </tr>
+                ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   );
 };
