@@ -1,14 +1,23 @@
-import graph from "../Images/graph.jpg";
+import { Link } from "react-router-dom";
 
 export default function LandingPage() {
   return (
     <div className="App-header">
-      <div className="section">
-        <div>
-          <img style={{ width: "150px" }} src={graph} />
-        </div>
-        <div>
-          <h3>Hedging solutions for retail investors</h3>
+      <div className="big-image">
+        <div class="overlay">
+          <div className="textbox">
+            <h1>
+              Hedg<span style={{ color: "#89f1f3" }}>.it</span>
+            </h1>
+            <p>
+              Simple and cost efficient cross currency stock investments with
+              automatic hedging
+            </p>
+            <div className="landing-button signup">Sign up</div>
+            <Link to="/getstarted">
+              <div className="landing-button">Login</div>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
