@@ -1,17 +1,16 @@
-import hero from "../Images/herobg.jpg";
+import graph from "../Images/graph.jpg";
 
 export default function LandingPage() {
   return (
     <div className="App-header">
-      {/* <div>
-        
-      </div>
-      <div class="hero-image-container">
-        <img class="heroimage" src={hero} />
-        <div class="overlay overlay_1">
-          <h3>Stock Hedging for Retail Investors</h3>
+      <div className="section1">
+        <div className="section1-1">
+          <img className="section-images" src={graph} />
         </div>
-      </div> */}
+        <div className="section1-2">
+          <h3>Hedging solutions for retail investors</h3>
+        </div>
+      </div>
     </div>
   );
 }
