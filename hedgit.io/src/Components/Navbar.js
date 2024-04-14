@@ -46,7 +46,7 @@ export default function Navbar(props) {
           </Link>
         </div>
       ) : (
-        <div>
+        <div class="navbar">
           <Link to="/">
             <CiHome class="nav-icon" size="24px" />
           </Link>
