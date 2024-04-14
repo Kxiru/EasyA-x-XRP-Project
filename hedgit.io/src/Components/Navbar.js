@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { IoIosSearch } from "react-icons/io";
 import { CiBookmark, CiHome, CiSettings } from "react-icons/ci";
+import { FaQuestion } from "react-icons/fa6";
 import { IoBookOutline } from "react-icons/io5";
 import { GoSignIn } from "react-icons/go";
 
@@ -22,7 +23,7 @@ export default function Navbar(props) {
           </Link>
 
           <Link
-            to="/dashboard"
+            to="/stocktrader"
             class="navbar-button"
             style={{ textDecoration: "none" }}
           >
@@ -30,11 +31,11 @@ export default function Navbar(props) {
           </Link>
 
           <Link
-            to="/stocktrader"
+            to="/faq"
             class="navbar-button"
             style={{ textDecoration: "none" }}
           >
-            <CiBookmark class="nav-icon" size="24px" />
+            <FaQuestion class="nav-icon" size="24px" />
           </Link>
 
           <Link

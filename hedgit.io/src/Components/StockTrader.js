@@ -65,10 +65,17 @@ const StockTrader = () => {
                   <td>${stock.price.toFixed(2)}</td>
                   <td>{stock.shares}</td>
                   <td>
-                    <button onClick={() => buyStock(stock.symbol, 1)}>
+                    <button
+                      className="currency-button"
+                      style={{ backgroundColor: "#89f1f3", color: "#121212" }}
+                      onClick={() => buyStock(stock.symbol, 1)}
+                    >
                       Buy
                     </button>
-                    <button onClick={() => sellStock(stock.symbol, 1)}>
+                    <button
+                      className="currency-button"
+                      onClick={() => sellStock(stock.symbol, 1)}
+                    >
                       Sell
                     </button>
                   </td>

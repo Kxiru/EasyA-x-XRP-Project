@@ -3,6 +3,7 @@ import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 import Login from "./Pages/Login";
 import Dashboard from "./Pages/Dashboard";
+import Faq from "./Pages/Faq";
 import LandingPage from "./Pages/LandingPage";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useState } from "react";
@@ -24,6 +25,7 @@ function App() {
             />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/stocktrader" element={<StockTrader />} />
+            <Route path="/faq" element={<Faq />} />
           </Routes>
           <Footer />
         </div>

@@ -1,6 +1,4 @@
-import Accordion from "../Components/Accordion";
 import graph from "../Images/Single Line Graph.png";
-import { accordionData } from "../utils/content";
 import React, { useState, useEffect } from "react";
 
 export default function Dashboard() {
@@ -137,24 +135,6 @@ export default function Dashboard() {
             </tbody>
           </table>
         </div>
-
-        {/* <h3>Investments</h3>
-        <div className="section">
-          <div className="accordion">
-            {accordionData.map(
-              ({ img, title, code, total, expiry, amount }) => (
-                <Accordion
-                  img={img}
-                  title={title}
-                  code={code}
-                  total={total}
-                  expiry={expiry}
-                  amount={amount}
-                />
-              )
-            )}
-          </div>
-        </div> */}
       </div>
     </div>
   );
