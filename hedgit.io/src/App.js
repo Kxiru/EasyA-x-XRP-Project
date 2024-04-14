@@ -1,12 +1,10 @@
 import "./App.css";
 import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
-import logo from "./Images/hedgit_logo.jpg";
-
 import Login from "./Pages/Login";
 import Dashboard from "./Pages/Dashboard";
 import LandingPage from "./Pages/LandingPage";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useState } from "react";
 
 function App() {
