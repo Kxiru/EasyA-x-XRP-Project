@@ -30,7 +30,7 @@ export default function Navbar(props) {
           </Link>
 
           <Link
-            to="/dashboard"
+            to="/stocktrader"
             class="navbar-button"
             style={{ textDecoration: "none" }}
           >

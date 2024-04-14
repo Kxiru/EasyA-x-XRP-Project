@@ -7,12 +7,14 @@
 }
 
 .App-header {
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
   min-width: 90vw;
   display: flex;
   flex-direction: column;
   font-size: calc(10px + 2vmin);
   color: white;
+  margin-left: 5vw;
 }
 
 .App-link {
@@ -26,13 +28,14 @@
   align-items: center;
   justify-content: center;
   align-content: center;
-  max-width: 5vw;
-  min-width: 4vw;
+  min-width: 5vw;
+  position: fixed;
+  height: 100%;
 }
 
 .nav-icon {
   padding: 10px;
-  color: #89f1f3;
+  color: #4c4c4c;
 }
 
 .nav-icon :hover {
@@ -58,8 +61,15 @@
 .section {
   background-color: #121212;
   border-radius: 20px;
-  margin: auto;
+  margin: 20px auto;
   padding: 20px 10px;
+  text-align: center;
+  max-width: 90vw;
+  min-width: 70vw;
+
+  img {
+    width: 95%;
+  }
 }
 
 /* Signin / Login page -------------------------------------------------------------- */
@@ -121,6 +131,17 @@ input[type="password"] {
 
 .dashboard {
   padding: 20px;
+
+  p {
+    font-size: 14px;
+    color: #4c4c4c;
+  }
+}
+
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  .section {
+    width: 50vw;
+  }
 }
 
 .currency-selector {
@@ -129,7 +150,52 @@ input[type="password"] {
 }
 
 .currency-button {
+  text-align: center;
   background-color: #222222;
   color: #4c4c4c;
-  border-radius: 20px;
+  border-radius: 10px;
+  height: 35px;
+  width: 80px;
+  margin: 5px;
+  align-content: center;
+
+  p {
+    margin: 0;
+  }
+}
+
+.accordion {
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.accordion-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
+  background-color: #21aeca;
+}
+
+.accordion-title:hover {
+  background-color: #3ab4cc;
+}
+
+.accordion-title,
+.accordion-content {
+  padding: 1rem;
+}
+
+.accordion-content {
+  background-color: #39b9d2;
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    font-size: 18px;
+  }
+
+  .accordion {
+    width: 90%;
+  }
 }

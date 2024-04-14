@@ -6,6 +6,7 @@ import Dashboard from "./Pages/Dashboard";
 import LandingPage from "./Pages/LandingPage";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useState } from "react";
+import StockTrader from "./Components/StockTrader";
 
 function App() {
   const [loggedin, setLoggedIn] = useState(false);
@@ -22,6 +23,7 @@ function App() {
               element={<Login setLoggedIn={setLoggedIn} />}
             />
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/stocktrader" element={<StockTrader />} />
           </Routes>
           <Footer />
         </div>
