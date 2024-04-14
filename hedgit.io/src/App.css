@@ -127,3 +127,9 @@ input[type="password"] {
   display: flex;
   flex-direction: row;
 }
+
+.currency-button {
+  background-color: #222222;
+  color: #4c4c4c;
+  border-radius: 20px;
+}
